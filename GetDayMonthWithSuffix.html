@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Java Script Program</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			today=new Date();
+			day=today.getDay()+1;
+			date=today.getDate();
+			month=today.getMonth()+1;
+			year=today.getFullYear();
+
+			if (day==1) wkday="Sunday";
+			else if (day==2) wkday="Monday";
+			else if (day==3) wkday="Tuesday";
+			else if (day==4) wkday="Wednesday";
+			else if (day==5) wkday="Thursday";
+			else if (day==6) wkday="Friday";
+			else wkday="Saturday";
+
+			if (date==1 || date ==21 || date ==31) suffix="st";
+			else if (date==2 || date ==22) suffix="nd";
+			else if (date==3 || date ==23) suffix="rd";
+			else suffix="th";
+
+			if (month==1)	name="January";
+			else if (month==2)	name="February";
+			else if (month==3)	name="March";
+			else if (month==4)	name="April";
+			else if (month==5)	name="May";
+			else if (month==6)	name="June";
+			else if (month==7)	name="July";
+			else if (month==8)	name="August";
+			else if (month==9)	name="September";
+			else if (month==10)	name="October";
+			else if (month==11)	name="November";
+			else	name="December";
+
+			document.write(wkday+","+date+"<sup>"+suffix+"</sup>"+name+" of "+year);
+		</script>
+	</body>
+</html>
